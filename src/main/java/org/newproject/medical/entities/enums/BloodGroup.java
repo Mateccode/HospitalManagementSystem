@@ -1,0 +1,10 @@
+package org.newproject.medical.entities.enums;
+
+
+//USE ENUMS FOR WHEN YOU WANT THE USERS TO ONLY SELECT THE INPUT EG DROPDOWN, RADIO BUTTONS, CHECKBOXES
+//ENUMS CAN ONLY HOLD ONE ENTITY
+
+public enum BloodGroup {
+
+    O_NEG, O_POS, AB
+}
