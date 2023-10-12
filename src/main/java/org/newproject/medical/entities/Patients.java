@@ -1,8 +1,19 @@
 package org.newproject.medical.entities;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Patients extends User{
+
+    public static List<Patients> listOfPatients = new ArrayList<>();
+
+    public Patients(String name, List<Ailments> ailments) {
+        this.ailments = ailments;
+
+        //due to this property name not present in Patients and Patients extends this property from User
+        //to set the name I don't use (this.name = name), I use (this.setName(name))
+        this.setName(name);
+    }
 
     private  String lastPrescription;
     private String diagonostic;
@@ -79,5 +90,9 @@ public class Patients extends User{
 
     public void setOccupation(String occupation) {
         this.occupation = occupation;
+    }
+
+    public String toString() {
+        return "Name of Patient: " + getName() + ", List Of Allergies: " + getAilments();
     }
 }

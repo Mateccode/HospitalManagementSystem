@@ -1,11 +1,10 @@
 package org.newproject.medical.services;
 
-public abstract class MedicalServices {
+import org.newproject.medical.entities.Patients;
 
-    protected abstract void discharge();
+public interface MedicalServices {
 
-    public void admitted(){
-        System.out.println("Admitted");
-    }
+    void discharge();
+    void admit(Patients patients);
 
 }
